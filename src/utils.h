@@ -4,6 +4,9 @@
  *  Created on: 25 de jul de 2018
  *      Author: vitor
  */
+#include <stdio.h>
+#include <math.h>
+#include <string.h>
 
 #ifndef UTILS_H_
 #define UTILS_H_
