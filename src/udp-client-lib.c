@@ -10,13 +10,24 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "utils.h"
+#include "messageUtils.h"
+//#include "constants.h"
+ #include "constants.h"
+
 
 int main(void) {
-	int a = 1999 / 1000;
-	printf("a = %d\r\n", a);
-	//convertIntToBytes(2018);
-	printf("vresultado: %f", convertBytesToFloat("1273.172"));
+
+	char message[MESSAGE_LENGTH];
+
+	//buildHelloMassage("id", "senha", message);
+	buildMessagePublish("SENSOR_1", "TOKEN_VITOR", -132.571, 0, message);
+
+	printf("message: %s", message);
+
+	float value = 0;
+	char topic[MESSAGE_TOPIC_LENGTH];
+
+	proccessDataMessage(message, topic, &value);
 
 	return EXIT_SUCCESS;
 }

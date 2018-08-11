@@ -14,12 +14,13 @@
 /***
  * Convert from integer value to byte array as a string
  */
-char *convertIntToBytes(int value);
+void convertIntToBytes(int value, char *charValue, int numbersOfBytes);
+void convertIntToBytesIgnoreNegative(int value, char *charValue, int numbersOfBytes);
 
 /***
  * Convert from float value to byte array as a string
  */
-char *convertFloatToBytes(float value);
+void convertFloatToBytes(float value, char *charValue, int numbersOfBytes);
 
 /***
  * Convert from byte array to int value
@@ -34,6 +35,8 @@ float convertBytesToFloat(char *value);
 /***
  * Compare if values are equals ignore void value
  */
-int compareBytesIgnoreCase(char *value1, char *value2);
+int compareBytes(char *value1, char *value2, int size);
+
+void subvectorBytes(char *vector, int starts, int end, char *result);
 
 #endif /* UTILS_H_ */
