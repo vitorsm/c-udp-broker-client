@@ -28,6 +28,8 @@
  * Message configuration constants
  */
 
+#define EMPTY_CHAR 127
+
 #define MESSAGE_TYPE_LENGTH 1
 #define MESSAGE_TOKEN_LENGTH 20
 //const int MESSAGE_HEADER_LENGTH = MESSAGE_TYPE_LENGTH + MESSAGE_TOKEN_LENGTH;
