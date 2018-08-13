@@ -100,7 +100,7 @@ void proccessDataMessage(char *message, char *topic, float *value) {
 
 	subvectorBytes(message, 1, 1 + MESSAGE_TOKEN_LENGTH, receivedToken);
 	subvectorBytes(message, MESSAGE_HEADER_LENGTH, MESSAGE_HEADER_LENGTH + MESSAGE_TOPIC_LENGTH, receivedTopic);
-	subvectorBytes(message, MESSAGE_HEADER_LENGTH + MESSAGE_TOPIC_LENGTH, MESSAGE_BODY_LENGTH, receivedValue);
+	subvectorBytes(message, MESSAGE_HEADER_LENGTH + MESSAGE_TOPIC_LENGTH, MESSAGE_HEADER_LENGTH + MESSAGE_BODY_LENGTH, receivedValue);
 
 	for (int i = 0; i < MESSAGE_TOPIC_LENGTH; i++) {
 		if (receivedTopic[i] == EMPTY_CHAR) {
@@ -108,7 +108,6 @@ void proccessDataMessage(char *message, char *topic, float *value) {
 		} else {
 			topic[i] = receivedTopic[i];
 		}
-
 	}
 
 	//remove empty char

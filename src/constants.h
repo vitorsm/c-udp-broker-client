@@ -8,11 +8,14 @@
 #ifndef CONSTANTS_H_
 #define CONSTANTS_H_
 
+#define TIME_REQUEST_HELLO 8000
+
 /***
  * Server constants
  */
 
 #define SERVER_PORT 4410
+#define SERVER_PORT_SEND 4409
 
 /***
  * Server constants

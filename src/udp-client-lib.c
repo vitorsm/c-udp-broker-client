@@ -26,8 +26,10 @@ int main(void) {
 
 	float value = 0;
 	char topic[MESSAGE_TOPIC_LENGTH];
+	char *m = "5test112";
+	proccessDataMessage(m, topic, &value);
 
-	proccessDataMessage(message, topic, &value);
+	printf("\r\n\r\ntopic: %s | value: %f", topic, value);
 
 	return EXIT_SUCCESS;
 }
